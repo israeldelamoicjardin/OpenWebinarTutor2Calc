@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "es.israeldelamo.openwebinar2"
-        minSdk = 29
+        minSdk = 32
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
