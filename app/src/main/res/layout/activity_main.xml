@@ -66,6 +66,16 @@
         app:layout_constraintGuide_percent="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineh7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelinev1"
@@ -379,6 +389,22 @@
         app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
         app:layout_constraintStart_toStartOf="@+id/guidelinev4"
         app:layout_constraintTop_toBottomOf="@+id/guidelineh6" />
+
+    <!-- **********************************************************-->
+    <!-- ******************* Conjunto de textos ********************-->
+    <!-- **********************************************************-->
+
+    <TextView
+        android:id="@+id/pantallaCalculadora"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineh6"
+
+        app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
+        app:layout_constraintStart_toStartOf="@+id/guidelinev1"
+
+        app:layout_constraintTop_toBottomOf="@+id/guidelineh7" />
+
 
 
 
