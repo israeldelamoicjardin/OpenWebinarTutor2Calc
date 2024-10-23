@@ -7,6 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!-- **********************************************************-->
+    <!-- ******************* Conjunto de guias ********************-->
+    <!-- **********************************************************-->
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineh1"
         android:layout_width="wrap_content"
@@ -105,6 +111,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_percent="1"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <!-- **********************************************************-->
+    <!-- ******************* Conjunto de botones ********************-->
+    <!-- **********************************************************-->
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -354,6 +366,10 @@
         app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
         app:layout_constraintStart_toEndOf="@id/guidelinev4"
         app:layout_constraintTop_toBottomOf="@+id/guidelineh6" />
+
+    <!-- **********************************************************-->
+    <!-- ******************* Conjunto de decoraciones ********************-->
+    <!-- **********************************************************-->
 
     <View
         android:id="@+id/separador"
