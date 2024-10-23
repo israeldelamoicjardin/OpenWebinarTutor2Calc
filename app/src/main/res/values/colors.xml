@@ -17,6 +17,7 @@
      <color name="violeta">#673AB7</color>
     <color name="gris">#3FC1C5B4</color>
     <color name="grisOscuro">#3F50524F</color>
+    <color name="grisClaro">#DBDBDB</color>
 
 
 </resources>

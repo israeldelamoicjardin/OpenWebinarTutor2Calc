@@ -6,21 +6,21 @@
     </style>
 
     <style name="BotonesDeNumeros">
-        <item name="android:background">@color/gris</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/grisOscuro</item>
+        <item name="android:textColor">@color/grisClaro</item>
         <item name="android:textSize">32sp</item>
 
     </style>
     <style name="BotonesDeOperadores">
-        <item name="android:background">@color/gris</item>
-        <item name="android:textColor">@color/azul</item>
+        <item name="android:background">@color/grisOscuro</item>
+        <item name="android:textColor">@color/amarillo</item>
         <item name="android:textSize">32sp</item>
         <item name="textAllCaps">true</item>
 
     </style>
 
     <style name="separador">
-        <item name="android:background">@color/gris</item>
+        <item name="android:background">@color/grisOscuro</item>
         <item name="android:layout_width">2dp</item>
         <item name="android:elevation">5dp</item>
 
