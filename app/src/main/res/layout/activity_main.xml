@@ -139,13 +139,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonIgual"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
+
+
         android:layout_width="0dp"
-
-
         android:layout_height="0dp"
-        android:text="@string/botonIgual"
 
+        android:text="@string/botonIgual"
         app:layout_constraintBottom_toTopOf="@+id/guidelineh1"
         app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
         app:layout_constraintStart_toEndOf="@id/guidelinev4"
@@ -197,13 +197,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonMas"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
+
+
         android:layout_width="0dp"
-
-
         android:layout_height="0dp"
-        android:text="@string/botonMas"
 
+        android:text="@string/botonMas"
         app:layout_constraintBottom_toTopOf="@+id/guidelineh2"
         app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
         app:layout_constraintStart_toEndOf="@id/guidelinev4"
@@ -255,13 +255,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonMenos"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
+
+
         android:layout_width="0dp"
-
-
         android:layout_height="0dp"
-        android:text="@string/botonMenos"
 
+        android:text="@string/botonMenos"
         app:layout_constraintBottom_toTopOf="@+id/guidelineh3"
         app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
         app:layout_constraintStart_toEndOf="@id/guidelinev4"
@@ -313,13 +313,13 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonPor"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
+
+
         android:layout_width="0dp"
-
-
         android:layout_height="0dp"
-        android:text="@string/botonPor"
 
+        android:text="@string/botonPor"
         app:layout_constraintBottom_toTopOf="@+id/guidelineh4"
         app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
         app:layout_constraintStart_toEndOf="@id/guidelinev4"
@@ -329,12 +329,12 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonLimpiar"
         style="@style/BotonesDeNumeros"
+
+
         android:layout_width="0dp"
-
-
         android:layout_height="0dp"
-        android:text="@string/botonLimpiar"
 
+        android:text="@string/botonLimpiar"
         app:layout_constraintBottom_toTopOf="@+id/guidelineh5"
         app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
         app:layout_constraintStart_toEndOf="@id/guidelinev1"
@@ -343,19 +343,26 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonDividir"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
+
+
         android:layout_width="0dp"
-
-
         android:layout_height="0dp"
-        android:text="@string/botonDividir"
 
+        android:text="@string/botonDividir"
         app:layout_constraintBottom_toTopOf="@+id/guidelineh5"
         app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
         app:layout_constraintStart_toEndOf="@id/guidelinev4"
         app:layout_constraintTop_toBottomOf="@+id/guidelineh6" />
 
-
+    <View
+        android:id="@+id/separador"
+        style="@style/separador"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineh1"
+        app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
+        app:layout_constraintStart_toStartOf="@+id/guidelinev4"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineh6" />
 
 
 
