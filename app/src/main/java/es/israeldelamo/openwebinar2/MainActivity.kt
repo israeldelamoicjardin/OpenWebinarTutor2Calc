@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private var primerNumero= 0.0
     private var segundoNumero = 0.0
-    private var resultadoNumero = 0.0
+    private var operacion: String ?= null
 
 
 
@@ -36,7 +36,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        //comenzamos con ninguna operacion
+        operacion = null
 
 
 
@@ -116,6 +117,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                Log.d(TAG,"Botón 0")
                onNumeroPulsado("0")
            }
+
+           binding.botonComa -> {
+               Log.d(TAG, "Botón ,")
+               onNumeroPulsado(",")
+           }
            ////////////////////////////////////////////////////////////////////////////////////////
            /////////////////////////// ZONA DE OPERADORES /////////////////////////////////
            ////////////////////////////////////////////////////////////////////////////////////////
@@ -123,24 +129,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
            binding.botonMas -> {
                Log.d(TAG,"Botón +")
+               onOperadorPulsado("+")
            }
            binding.botonMenos -> {
                Log.d(TAG,"Botón -")
+               onOperadorPulsado("-")
            }
            binding.botonPor -> {
                Log.d(TAG,"Botón *")
+               onOperadorPulsado("*")
            }
            binding.botonDividir -> {
                Log.d(TAG,"Botón /")
-           }
-           binding.botonComa -> {
-               Log.d(TAG,"Botón ,")
+               onOperadorPulsado("/")
            }
            binding.botonLimpiar -> {
                Log.d(TAG,"Botón CE")
+               onCEPulsado()
            }
            binding.botonIgual-> {
                Log.d(TAG,"Botón =")
+               onIgualPulsado()
            }
 
 
@@ -155,6 +164,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      */
     private fun onNumeroPulsado(numero: String){
         dibujarPantalla(numero)
+        mirarOperacion()
     }
 
     /**
@@ -173,7 +183,71 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         //ahora ponemos el valor
         binding.pantallaCalculadora.text = result
+    }
 
+
+    /**
+     * Trata los diferentes operadores de la calculadora, si se ha pulado la operacion lo nuevo
+     * que entra va al segundo operador, de lo contrario al primero
+     */
+    private fun mirarOperacion(){
+
+        //si el resultado de la operacióno existe que devuelva el primer operador
+        // de lo contrario el segundo
+        if (operacion == null)
+            primerNumero = binding.pantallaCalculadora.text.toString().toDouble()
+        else
+            segundoNumero = binding.pantallaCalculadora.text.toString().toDouble()
+    }
+
+
+    /**
+     * Trata los diferentes operadores de la calculadora, al haber pulsado un operador debe
+     * poner a cero la pantalla para que el usuario pueda meter nuevos numeros
+     */
+    private fun onOperadorPulsado(operacion :String){
+        // recupera la operación a realizar
+        this.operacion = operacion
+        // lee lo que pone en la pantalla y metelo en primer operador
+        primerNumero = binding.pantallaCalculadora.text.toString().toDouble()
+        // limpia la pantalla esperando al siguiente operador
+        binding.pantallaCalculadora.text = "0"
+    }
+
+
+    /**
+     * Da tratamiento al botón igual
+     */
+    private fun onIgualPulsado(){
+        val result= when (operacion){
+            "+"-> primerNumero + segundoNumero
+            "-"-> primerNumero - segundoNumero
+            "*"-> primerNumero * segundoNumero
+            "/"-> primerNumero / segundoNumero
+
+            else -> 0
+        }
+
+        //limpia la operación
+        operacion = null
+        primerNumero  = result.toDouble()
+
+        //formatea el resultado para que solo tenga dos comas
+        binding.pantallaCalculadora.text = if (result.toString().endsWith(".0")){
+            result.toString().replace(".0","")
+        } else {
+            "%.2f".format(result)
+        }
 
     }
+
+
+    /**
+     * Limpia la pantalla y borra las variables de operador1, 2 y operacion
+     */
+
+    private fun onCEPulsado(){
+
+    }
+
 }
