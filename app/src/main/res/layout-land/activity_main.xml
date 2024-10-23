@@ -21,13 +21,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_percent="1"
         app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineh2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.9"
+        app:layout_constraintGuide_percent="0.80"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.8"
+        app:layout_constraintGuide_percent="0.6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.7"
+        app:layout_constraintGuide_percent="0.4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -54,7 +55,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.6"
+        app:layout_constraintGuide_percent="0.2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -63,7 +64,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintGuide_percent="0.2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -72,9 +73,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintGuide_percent="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0"
+        app:layout_constraintGuide_percent="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.25"
+        app:layout_constraintGuide_percent="0.2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintGuide_percent="0.4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.75"
+        app:layout_constraintGuide_percent="0.6"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -119,7 +119,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="1"
+        app:layout_constraintGuide_percent="0.79"
         app:layout_constraintStart_toStartOf="parent" />
 
 
@@ -139,25 +139,26 @@
         android:text="@string/boton0"
 
         app:layout_constraintBottom_toTopOf="@+id/guidelineh1"
-        app:layout_constraintEnd_toStartOf="@+id/guidelinev3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
         app:layout_constraintStart_toEndOf="@id/guidelinev1"
         app:layout_constraintTop_toBottomOf="@+id/guidelineh2" />
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonComa"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
         android:layout_width="0dp"
 
 
         android:layout_height="0dp"
         android:text="@string/botonComa"
 
-        app:layout_constraintBottom_toTopOf="@+id/guidelineh1"
-        app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
-        app:layout_constraintStart_toEndOf="@id/guidelinev3"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineh2" />
-
+        app:layout_constraintBottom_toTopOf="@+id/guidelineh3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guidelinev5"
+        app:layout_constraintTop_toTopOf="@+id/guidelineh4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonIgual"
@@ -342,26 +343,26 @@
         android:layout_height="0dp"
 
         android:text="@string/botonPor"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineh4"
-        app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
-        app:layout_constraintStart_toEndOf="@id/guidelinev4"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineh5" />
-
+        app:layout_constraintBottom_toTopOf="@+id/guidelineh2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guidelinev5"
+        app:layout_constraintTop_toTopOf="@+id/guidelineh3"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonLimpiar"
-        style="@style/BotonesDeNumeros"
+        style="@style/BotonesDeOperadores"
 
 
         android:layout_width="0dp"
         android:layout_height="0dp"
 
         android:text="@string/botonLimpiar"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineh5"
-        app:layout_constraintEnd_toStartOf="@+id/guidelinev4"
-        app:layout_constraintStart_toEndOf="@id/guidelinev1"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineh6" />
-
+        app:layout_constraintBottom_toTopOf="@+id/guidelineh4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelinev4"
+        app:layout_constraintTop_toTopOf="@+id/guidelineh5" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botonDividir"
@@ -372,14 +373,19 @@
         android:layout_height="0dp"
 
         android:text="@string/botonDividir"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineh5"
-        app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
-        app:layout_constraintStart_toEndOf="@id/guidelinev4"
-        app:layout_constraintTop_toBottomOf="@+id/guidelineh6" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guidelinev5"
+        app:layout_constraintTop_toTopOf="@+id/guidelineh2"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <!-- **********************************************************-->
     <!-- ******************* Conjunto de decoraciones ********************-->
     <!-- **********************************************************-->
+
+
 
     <View
         android:id="@+id/separador"
@@ -396,21 +402,22 @@
 
     <TextView
         android:id="@+id/pantallaCalculadora"
+        style="@style/NumeroDePantalla"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        style="@style/NumeroDePantalla"
-        android:layout_margin="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center|end"
         android:text="@string/boton0"
 
         app:layout_constraintBottom_toTopOf="@+id/guidelineh6"
 
-        app:layout_constraintEnd_toStartOf="@+id/guidelinev5"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guidelinev1"
-
-        app:layout_constraintTop_toBottomOf="@+id/guidelineh7" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/guidelineh7"
+        app:layout_constraintVertical_bias="0.606" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
