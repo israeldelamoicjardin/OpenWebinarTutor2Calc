@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import es.israeldelamo.openwebinar2.databinding.ActivityMainBinding
+import org.jetbrains.annotations.Async.Execute
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -219,6 +220,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      * Da tratamiento al botón igual
      */
     private fun onIgualPulsado(){
+        // devuelve a la variable result el lo que se haya elegido en operacion
+        // sumas restas productos o divisiones
         val result= when (operacion){
             "+"-> primerNumero + segundoNumero
             "-"-> primerNumero - segundoNumero
@@ -232,12 +235,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         operacion = null
         primerNumero  = result.toDouble()
 
-        //formatea el resultado para que solo tenga dos comas
-        binding.pantallaCalculadora.text = if (result.toString().endsWith(".0")){
-            result.toString().replace(".0","")
-        } else {
-            "%.2f".format(result)
+
+        try {
+            //formatea el resultado para que solo tenga dos comas
+            binding.pantallaCalculadora.text = if (result.toString().endsWith(".0")){
+                result.toString().replace(".0","")
+            } else {
+                "%.2f".format(result)
+            }
+            //por si intentas dividir entre cero
+        }catch (e: Exception) {
+            e.printStackTrace()
         }
+
 
     }
 
@@ -247,6 +257,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
      */
 
     private fun onCEPulsado(){
+            binding.pantallaCalculadora.text = "0"
+        primerNumero = 0.0
+        segundoNumero = 0.0
 
     }
 
